@@ -11,22 +11,26 @@
     margin: 0;
 }
 body{
-    background-color: black;
+    background-color: hsl(215, 86%, 9%);
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: auto;
+    font-family: 'Outfit', sans-serif;
 }
-section{
+main{
     background-color: var(--blue-card);
-    width: 60%;
-    max-width: 500px;  
+    width: 90%;
+    max-width: 350px;  
+    min-width: 350px;
     margin-top: 5em; 
+    border-radius: 16PX;
 }
 .card{
     width: 85%;
     margin: auto;
+    max-width: 350px;
 }
 picture{
     display: flex;
@@ -35,6 +39,11 @@ picture{
     position: relative;
     margin-top: 1em;
     width: 100%;
+    cursor: pointer;
+}
+picture img{
+    max-height: 450px;
+    max-width: 350px;
 }
 picture,
 .img-eq,
@@ -64,14 +73,13 @@ picture:hover .card-view{
 .card-title{
     margin-top: 1.5em;
 }
-.card-creator{
-    display: flex;
-    text-align: center;
-    align-items: center;
-    gap: 1em;
-}
+
 .card-title h1{
     color: var(--white);
+    cursor: pointer;
+}
+.card-title h1:hover{
+    color: var(--primary-soft);
 }
 
 .card-creator img{
@@ -90,12 +98,14 @@ picture:hover .card-view{
     margin-top: 1em;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 1em;
 }
 .first-info {
     color: var(--primary-soft);
     display: flex;
+    font-weight: 600;
     gap: 0.5em;
-    font-size: 1.2em;
+    font-size: 1.1em;
     align-items: center;
     text-align: center;
     justify-content: center;
@@ -105,10 +115,36 @@ picture:hover .card-view{
     display: flex;
     gap: 0.5em;
 }
+.card-line{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+}
+.line{
+    content: '';
+    border: solid var(--primary-cyan) 1px;
+    width: 100%;
+    margin: auto;
+}
+.card-creator{
+    display: flex;
+    text-align: center;
+    color: var(--white);
+    align-items: center;
+    margin: auto;
+    margin-bottom: 1.5em;
+    gap: 1em;
 
-
-footer{
-    bottom: 0;
-    left: 0;
-    position: fixed;
+}
+.card-creator img{
+    border: solid 1px white;
+    border-radius: 50%;
+}
+.card-creator #create{
+    color: var(--primary-cyan);
+}
+.card-creator #creator-name:hover{
+    color: var(--primary-soft);
+    cursor: pointer;
 }
