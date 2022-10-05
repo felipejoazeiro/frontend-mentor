@@ -33,6 +33,7 @@ main{
     margin-top: 5em;
     margin-bottom: 5em;
     border-radius: 8px;
+    max-width: 400px;
 }
 .card-img{
     background-color: var(--soft-violet);
@@ -83,4 +84,19 @@ main{
     color: var(--transparent-white-headings);
     margin-top: 0.3em;
     font-size: 15px;
+}
+footer{
+    color: var(--transparent-white-headings);
+}
+
+@media (min-width:1440px) {
+    main{
+        width: 100%;
+    }
+    .card{
+        display: flex;
+        flex-direction: row;
+        width: 80%;
+        max-width: 80%;
+    }
 }
